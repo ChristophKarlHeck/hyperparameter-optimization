@@ -274,7 +274,7 @@ def memory_kbytes(C1, C2, C3, k1, k2, k3):
              + C3*C2*k3 + 5*C3 + 2)
     pool  = 2**14
     buf   = (max(C1, C2, C3)*100)*2
-    return (prog + convs + pool + buf) / 1024   # → kB
+    return (prog + convs + pool + buf) / 1000
 
 def objective(trial):
     """Optuna objective function for hyperparameter tuning with parameter restrictions."""
